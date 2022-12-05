@@ -14,7 +14,7 @@ export class GroceryList extends Component {
         this.setState({userInput: e});
     }
 
-    addItem(input) {
+    addItem(input) { //Button Add
         if (input === '') {
             return false
         }
@@ -23,18 +23,18 @@ export class GroceryList extends Component {
         this.setState({groceryList: listArray, userInput: ''})
     }
 
-    crossedWord(event) {
+    crossedWord(event) { //When the list item is crossed
         const li = event.target;
         li.classList.toggle('crossed');
     }
 
-    deleteItem() {
+    deleteItem() { //Button Delete
         let listArray = this.state.groceryList;
         listArray = [];
         this.setState({groceryList: listArray})
     }
 
-    onFormSubmit(e) {
+    onFormSubmit(e) { //When we click ENTER
         e.preventDefault();
     }
 
